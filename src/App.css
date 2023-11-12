@@ -4,17 +4,3 @@
 html{
     scroll-behavior: smooth;
 }
-.br{
-    border: 1px solid rgba(0, 0, 0, 0.57);
-    outline: none;
-}
-body{
-    background-color:#0d2435;
-    color: white;
-}
-input{
-    border-radius: 5px;
-    height: 40px;
-    padding-left: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.42);
-}
