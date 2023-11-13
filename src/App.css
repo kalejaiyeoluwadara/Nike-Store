@@ -1,6 +1,28 @@
 *{
     font-family: poppins,sans-serif;
+    margin-top: 0px;
+    padding:0px ;
 }
 html{
     scroll-behavior: smooth;
+}
+hr{
+    border-top-width:3px ;
+}
+body{
+    background-color: #f5f3f3;
+    overflow-x: hidden;
+}
+.ral{
+    font-family: raleway,sans-serif;
+}
+.sh{
+    box-shadow:-2px 4px 18px 0px #0000000a;
+}
+.sqr{
+    border-top-left-radius:20px ;
+    border-bottom-right-radius: 20px;
+}
+.tr{
+    transform: translateY(-30px);
 }
