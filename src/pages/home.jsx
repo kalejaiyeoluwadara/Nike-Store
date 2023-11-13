@@ -3,6 +3,7 @@ import Foot from '../components/foot'
 import { useGlobal } from '../context';
 import Category from '../components/category';
 import Popular from '../components/popular';
+import {Link} from 'react-router-dom'
 import New from '../components/new';
 function Home() {
     const {spark,menu,bag2,sliders,search} = useGlobal();
@@ -11,7 +12,7 @@ function Home() {
         {/* Intro section */}
       <section className='flex items-center justify-between px-6 pt-6 '>
         <div>
-            <img src={menu} alt="" />
+            <Link to="/menu" ><img src={menu} alt="" /></Link>
         </div>
         <div className='flex items-start'>
             <img src={spark} alt="" />

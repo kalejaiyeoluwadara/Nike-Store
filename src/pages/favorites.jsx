@@ -34,7 +34,7 @@ function Favorites() {
         return(
             <section
             key={id}
-            className=" bg-white  relative mt-4 sh flex items-start flex-col py-3 px-3 rounded-[10px] justify-center w-[170px] "
+            className=" bg-white  relative mt-4 sh flex items-start flex-col py-3 px-3 rounded-[10px] justify-center w-[160px] "
           >
             <div className="absolute w-[25px] h-[25px] bg-red-100 flex items-center justify-center rounded-[50%]  top-3 left-3">
               <img src={heart2} alt="" />
@@ -44,7 +44,7 @@ function Favorites() {
             </div>
             <div>
               <h4 className="text-blue-600 font-[500] ">BEST SELLER</h4>
-              <h3 className="font-[500] text-[18px] opacity-[0.8] ">
+              <h3 className="font-[500] text-[20px] opacity-[0.8] ">
                 {d.name}
               </h3>
               <p className="font-[500] mt-3 ">${d.price}</p>
