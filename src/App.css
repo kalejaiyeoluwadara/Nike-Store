@@ -1,5 +1,5 @@
 *{
-    font-family: poppins,sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin-top: 0px;
     padding:0px ;
 }
@@ -18,7 +18,7 @@ body{
     overflow-x: hidden;
 }
 .ral{
-    font-family: raleway,sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 .sh{
     box-shadow:-2px 4px 18px 0px #0000000a;
