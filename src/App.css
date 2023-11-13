@@ -6,6 +6,10 @@
 html{
     scroll-behavior: smooth;
 }
+.board{
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
 hr{
     border-top-width:3px ;
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import profile1 from './../assets/profile.png'
 import bac from './../assets/views/menubac.png'
 import { useGlobal } from '../context'
-
+import {Link} from 'react-router-dom';
 function Menu() {
     const {profile,love,cart,bell,sliders,settings,order} = useGlobal();
     const pages = [{
@@ -25,7 +25,8 @@ function Menu() {
         img:settings
     }]
   return (
-    <div className='bg-blue-500 h-screen px-10 py-10 w-screen '>
+<Link to="/home">
+<div className='bg-blue-500 h-screen px-10 py-10 w-screen '>
       <section>
         <img src={profile1}alt="" />
         <h1 className='text-white ral mt-4 font-[500] text-[20px] '>Emmanuel Oyiboke</h1>
@@ -58,6 +59,7 @@ function Menu() {
 
       <img className='absolute top-0 -right-[40px] h-[90%] ' src={bac} alt="" />
     </div>
+</Link>
   )
 }
 
