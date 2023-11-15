@@ -7,16 +7,17 @@ import perc from './../src/assets/icons/perc.png'
 import main from './../src/assets/shoes/main.png'
 import likes from './../src/assets/icons/likes.png'
 import profile from './../src/assets/icons/profile.png'
-import bell from './../src/assets/icons/bell.png'
+import noti from './../src/assets/icons/noti.svg'
 import settings from './../src/assets/icons/settings.png'
 import order from './../src/assets/icons/order.png'
 import menu from './../src/assets/icons/menu.png'
 import heart from './../src/assets/icons/heart.png'
 import love from './../src/assets/icons/love.png'
+import bell from './../src/assets/icons/bell.png'
 import news from './../src/assets/icons/new.png'
 import spark from './../src/assets/icons/spark.png'
 import heart2 from './../src/assets/icons/heart2.png'
-import bag2 from './../src/assets/icons/bag2.png'
+import bag2 from './../src/assets/icons/bag2.svg'
 import sliders from './../src/assets/icons/sliders.png'
 import search from './../src/assets/icons/search.png'
 import jordan from './../src/assets/shoes/zoom.png'
@@ -26,9 +27,9 @@ import nike from './../src/assets/shoes/nike.png'
 import shoe1 from './../src/assets/shoes/shoe1.png'
 
 function AppProvider({ children }) {
- 
+ const [present,setPresent] = useState('home');
   return (
-    <AppContext.Provider value={{shoe1,cipo,love,nike,heart2,settings,order,news,main,perc,jordan,max,home,bell,sliders,search,bag2,spark,menu,likes,profile,cart}} >
+    <AppContext.Provider value={{present,setPresent,bell,shoe1,cipo,love,nike,heart2,settings,order,news,main,perc,jordan,max,home,noti,sliders,search,bag2,spark,menu,likes,profile,cart}} >
       {children}
     </AppContext.Provider>
   );

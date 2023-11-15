@@ -23,10 +23,17 @@ body{
 .sh{
     box-shadow:-2px 4px 18px 0px #0000000a;
 }
+/* img{
+    position: relative;
+    z-index: 40;
+} */
 .sqr{
     border-top-left-radius:20px ;
     border-bottom-right-radius: 20px;
 }
 .tr{
-    transform: translateY(-30px);
+    transform: translate(1px,-51px);
+    
+    position: relative;
+    z-index: 40;
 }

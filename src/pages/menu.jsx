@@ -2,12 +2,13 @@ import React from 'react'
 import profile1 from './../assets/profile.png'
 import bac from './../assets/views/menubac.png'
 import { useGlobal } from '../context'
+import sign from './../assets/icons/sign.png'
 import {Link} from 'react-router-dom';
 function Menu() {
     const {profile,love,cart,bell,sliders,settings,order} = useGlobal();
     const pages = [{
         name:'profile',
-        img:profile
+        img:cart
     },{
         name:'My Cart',
         img:cart
@@ -26,7 +27,7 @@ function Menu() {
     }]
   return (
 <Link to="/home">
-<div className='bg-blue-500 h-screen px-10 py-10 w-screen '>
+<div className='bg-blue-500 h-[110vh] px-10 py-10 w-screen '>
       <section>
         <img src={profile1}alt="" />
         <h1 className='text-white ral mt-4 font-[500] text-[20px] '>Emmanuel Oyiboke</h1>
@@ -50,7 +51,7 @@ function Menu() {
         <div>
         <div className='flex gap-4 mt-6 items-start '>
             <div className='w-[40px]'>
-            <img src={sliders} alt="" />
+            <img src={sign} alt="" />
             </div>
             <p className=' text-start text-white capitalize '>Sign out</p>
         </div>

@@ -4,7 +4,7 @@ import profile1 from './../assets/profile.png'
 import edit from './../assets/icons/edit.png'
 function Profile() {
   return (
-    <div className='  pt-6  w-screen h-[auto] bg-[#f5f3f3]'>
+    <div className='  pt-6  w-screen h-[90vh] bg-[#f5f3f3]'>
       <section className='flex pr-6  justify-between mb-6 items-center '>
         <p className='opacity-[0]'>Empty</p>
         <h3 className='font-[700] text-[19px] ral '>Profile</h3>

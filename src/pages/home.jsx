@@ -4,9 +4,10 @@ import { useGlobal } from '../context';
 import Category from '../components/category';
 import Popular from '../components/popular';
 import {Link} from 'react-router-dom'
+import bag2 from '../assets/icons/bag2.png'
 import New from '../components/new';
 function Home() {
-    const {spark,menu,bag2,sliders,search} = useGlobal();
+    const {spark,menu,sliders,search} = useGlobal();
   return (
     <div className=' relative pb-[140px] w-screen h-[auto] bg-[#f5f3f3]'>
         {/* Intro section */}
@@ -26,7 +27,7 @@ function Home() {
 
       {/* search section */}
       <section className='flex px-6 mt-6 items-center justify-between gap-4'>
-        <div className='bg-white px-4 shadow-md h-[60px] w-[80%] rounded-[10px] flex items-center justify-start gap-4 '>
+        <div className='bg-white px-4 shadow-md h-[50px] w-[80%] rounded-[10px] flex items-center justify-start gap-4 '>
                 <img className='opacity-[0.6]' src={search} alt="" />
                 <input className='w-[90%]  outline-none placeholder:text-bg-gray-900 placeholder:opacity-1 ' placeholder='Looking for shoes' type="text" />
         </div>
