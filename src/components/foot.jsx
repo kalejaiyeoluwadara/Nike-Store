@@ -38,9 +38,11 @@ function Foot() {
               ease:'easeInOut'
             }} src={likes} alt="" />}</div></Link>        
       </div>
+     <Link to='/shop' >
      <div className='h-[60px] sh tr w-[60px] flex items-center justify-center rounded-[50%] bg-blue-600 '>
         <img src={cart} alt="" />
       </div>
+     </Link>
       <div className='flex r gap-8 '>
       <Link  to="/notification" ><div className='relative z-40' onClick={() =>{handleClick('bell')}}>{present === "bell" ? <img src={hbell}    alt="" /> : <motion.img   whileHover={{
               scale:1.1

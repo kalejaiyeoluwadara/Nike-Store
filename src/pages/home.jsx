@@ -7,7 +7,6 @@ import {Link} from 'react-router-dom'
 import bag2 from '../assets/icons/bag2.png'
 import New from '../components/new';
 import { motion,AnimatePresence } from 'framer-motion';
-import Cover from './cover';
 import Menu from './menu';
 function Home() {
     const {spark,menu,sliders,search,setMenu,menus} = useGlobal();    

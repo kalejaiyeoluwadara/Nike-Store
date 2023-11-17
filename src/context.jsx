@@ -20,11 +20,15 @@ import heart2 from './../src/assets/icons/heart2.png'
 import bag2 from './../src/assets/icons/bag2.svg'
 import sliders from './../src/assets/icons/sliders.png'
 import search from './../src/assets/icons/search.png'
+import ellipse from './../src/assets/icons/ellipse.png'
 import jordan from './../src/assets/shoes/zoom.png'
 import max from './../src/assets/shoes/max.png'
+import nikes from './../src/assets/shoes/nikes.png'
+import black from './../src/assets/shoes/black.png'
 import cipo from './../src/assets/shoes/cipo.png'
 import nike from './../src/assets/shoes/nike.png'
 import shoe1 from './../src/assets/shoes/shoe1.png'
+import air from './../src/assets/shoes/air.png'
 function AppProvider({ children }) {
   const [menus,setMenu] = useState(false)
   
@@ -40,7 +44,7 @@ function AppProvider({ children }) {
     left:'-100vw'
   }} 
   return (
-    <AppContext.Provider value={{menus,setMenu,present,setPresent,bell,shoe1,cipo,love,nike,heart2,settings,order,news,main,perc,jordan,max,home,noti,sliders,search,bag2,spark,menu,likes,profile,cart}} >
+    <AppContext.Provider value={{ellipse,nikes,black,air,menus,setMenu,present,setPresent,bell,shoe1,cipo,love,nike,heart2,settings,order,news,main,perc,jordan,max,home,noti,sliders,search,bag2,spark,menu,likes,profile,cart}} >
       {children}
     </AppContext.Provider>
   );

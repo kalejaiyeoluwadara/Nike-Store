@@ -10,6 +10,7 @@ import Notification from "./pages/notification";
 import { motion,AnimatePresence } from "framer-motion";
 import { useGlobal } from "./context";
 import Foot from "./components/foot";
+import Shop from "./pages/shop";
 const App = () => {
   const {menus} = useGlobal();
   let location = useLocation();
@@ -20,12 +21,15 @@ const App = () => {
 
         <Route exact path='/'>
           <Onboard/>
-        </Route>               
+        </Route> 
         <Route path='/home'>
         <Home/>
         </Route>
         <Route path='/profile'>
         <Profile/>
+        </Route>
+        <Route path='/shop'>
+        <Shop/>
         </Route>
         <Route path='/favorites'>
         <Favorites/>
