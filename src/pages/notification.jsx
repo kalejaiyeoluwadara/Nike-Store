@@ -1,10 +1,9 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { useGlobal } from '../context'
 import Foot from '../components/foot';
-
+import { motion } from 'framer-motion';
 function Notification() {
     const {jordan,max,nike,main,shoe1,cipo} = useGlobal();
-
     const details = [{
         name:'Nike jordan',
         img:max,
@@ -31,8 +30,21 @@ function Notification() {
         time:'40',
         price2:'58.7',
       }, ]
+    
+      const variant= {
+        initial:{
+          x:'-100vw'
+        },
+        animate:{
+          x:0,
+          transition:{delay:0.2,duration:0.5}
+        },
+        exit:{
+          x:'100vw',
+          transition:{ease:'easeInOut'}
+        }} 
   return (
-    <div className="  pt-6 pb-[140px]  w-screen h-auto bg-[#f5f3f3]">
+    <motion.div  variants={variant} initial="initial" animate="animate" exit="exit" className="  pt-6 pb-[120px] relative   w-screen h-auto bg-[#F7F7F9]">
         <h1 className="font-[700] text-[19px] text-center ral ">Notification</h1>
         <section className='mt-10 px-6  '>
             <div>
@@ -40,9 +52,11 @@ function Notification() {
                 {/* single */}
               {
                     details.map((d,id) =>{
+                        const [selected,setSelected] = useState(false);
                         return(
-                            <div className='flex  mt-6 gap-6'>
-                    <div className='bg-white hover:bg-gray-100 flex items-center justify-center w-[150px] h-[100px] rounded-[8px]'>
+                            <motion.div  onClick={() =>{setSelected(!selected)}}
+ className={`flex ${selected ?  'bg-white px-4 shadow-md' :' bg-none' }  rounded-[12px] red-300 py-8 mt-6 gap-6`}>
+                    <div className={`bg-white ${selected ?  'bg-gray-100' :' bg-white' }  flex items-center justify-center w-[150px] h-[100px] rounded-[8px]`}>
                         <img src={d.img} alt="" />
                     </div>
                     <div>
@@ -53,7 +67,7 @@ function Notification() {
                         <p className='font-[600] text-gray-500 '>$260.00</p>
                     </div>
                     </div>
-                </div>
+                </motion.div>
                         )
                     })
                 }
@@ -65,9 +79,11 @@ function Notification() {
                 {/* single */}
                 {
                     details2.map((d,id) =>{
+                        const [select,setSelect] = useState(false)
                         return(
-                            <div className='flex mt-6 gap-6'>
-                    <div className='bg-white flex items-center justify-center w-[150px] h-[100px] rounded-[8px]'>
+                            <motion.div  onClick={() =>{setSelect(!select)}}
+                            className={`flex ${select ?  'bg-white px-4 shadow-md' :' bg-none' }  rounded-[12px] red-300 py-8 mt-6 gap-6`}>
+                    <div className={`bg-white ${select ?  'bg-gray-100' :' bg-white' }  flex items-center justify-center w-[150px] h-[100px] rounded-[8px]`}>
                         <img src={d.img} alt="" />
                     </div>
                     <div>
@@ -78,14 +94,14 @@ function Notification() {
                         <p className='font-[600] text-gray-500 '>$260.00</p>
                     </div>
                     </div>
-                </div>
+                </motion.div>
                         )
                     })
                 }
             </div>
         </section>
         <Foot/>
-    </div>
+    </motion.div>
   )
 }
 

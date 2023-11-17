@@ -1,17 +1,27 @@
 import React from 'react'
 import { useGlobal } from '../context'
-
+import { motion } from 'framer-motion';
 
 function Popular() {
  const {jordan,max,likes} = useGlobal();
   return (
-    <div className='mt-8 px-6'>
+    <div 
+    
+    className='mt-8 px-6'>
       <h1 className='font-[600] ral text-[19px]'>Popular shoes</h1>
         <section className='flex gap-6 justify-between'>
             {
                 [max,jordan].map((item,id) =>{
                     return(
-                        <section key={id} className=' bg-white relative mt-4 sh flex items-start flex-col py-3 px-4 rounded-[10px] justify-center w-[180px] '>
+                        <motion.section key={id} 
+                        transition={{
+                            duration:0.3
+                        }}
+                        whileHover={{
+                            y:-10,
+                            scale:1.1
+                            
+                        }} className=' bg-white relative mt-4 sh flex items-start flex-col py-3 px-4 rounded-[10px] justify-center w-[180px] '>
                         <div className='absolute top-3 left-3'>
                             <img src={likes} alt="" />
                         </div>
@@ -27,7 +37,7 @@ function Popular() {
                         <div className='absolute text-[25px] font-[300] text-white bg-blue-600 sqr flex items-center justify-center h-[40px] w-[40px] right-0 bottom-0'>
                             +
                         </div>
-                    </section>
+                    </motion.section>
                     )
                 })
             }

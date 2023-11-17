@@ -1,6 +1,7 @@
 import React from "react";
 import { useGlobal } from "../context";
 import Foot from "../components/foot";
+import { motion } from "framer-motion";
 function Favorites() {
   const { heart2,jordan, likes,main,max,nike,shoe1 } = useGlobal();
   const details = [{
@@ -20,8 +21,9 @@ function Favorites() {
     img:shoe1,
     price:'57.6'
   }, ]
+  const {variant} = useGlobal();
   return (
-    <div className="  pt-6 pb-[140px]  w-screen h-auto bg-[#f5f3f3]">
+    <motion.div  variants={variant} initial="initial" animate="animate" exit="exit" className="  pt-6 pb-[140px]  w-screen h-auto bg-[#f5f3f3]">
       <section className=" flex justify-between items-center">
         <p className="opacity-0">Fav</p>
         <h1 className="font-[700] text-[19px] ral ">Favorite</h1>
@@ -32,7 +34,16 @@ function Favorites() {
       <section className="mt-10 grid pb-20 grid-cols-2 gap-6 px-6 ">
       {details.map((d,id) =>{
         return(
-            <section
+            <motion.section
+            transition={{
+              duration:0.3,
+              ease:'easeOut'
+          }}
+          whileHover={{
+              y:-10,
+              scale:1.1
+              
+          }}
             key={id}
             className=" bg-white  relative mt-4 sh flex items-start flex-col py-3 px-3 rounded-[10px] justify-center w-[160px] "
           >
@@ -54,13 +65,13 @@ function Favorites() {
               <div className=" h-[15px] w-[15px] bg-red-500 rounded-[50%] "/>
               <div className=" h-[15px] w-[15px] bg-purple-500 rounded-[50%] "/>
             </section>
-          </section>
+          </motion.section>
         )
       })}
       </section>
 
       <Foot />
-    </div>
+    </motion.div>
   );
 }
 

@@ -25,11 +25,22 @@ import max from './../src/assets/shoes/max.png'
 import cipo from './../src/assets/shoes/cipo.png'
 import nike from './../src/assets/shoes/nike.png'
 import shoe1 from './../src/assets/shoes/shoe1.png'
-
 function AppProvider({ children }) {
+  const [menus,setMenu] = useState(false)
+  
  const [present,setPresent] = useState('home');
+ const variant= {
+  initial:{
+    left:'-100vw',
+  },
+  animate:{
+    left:0
+  },
+  exit:{
+    left:'-100vw'
+  }} 
   return (
-    <AppContext.Provider value={{present,setPresent,bell,shoe1,cipo,love,nike,heart2,settings,order,news,main,perc,jordan,max,home,noti,sliders,search,bag2,spark,menu,likes,profile,cart}} >
+    <AppContext.Provider value={{menus,setMenu,present,setPresent,bell,shoe1,cipo,love,nike,heart2,settings,order,news,main,perc,jordan,max,home,noti,sliders,search,bag2,spark,menu,likes,profile,cart}} >
       {children}
     </AppContext.Provider>
   );

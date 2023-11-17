@@ -17,6 +17,7 @@ body{
     background-color: #f5f3f3;
     overflow-x: hidden;
 }
+
 .ral{
     font-family: 'Raleway', sans-serif;
 }
@@ -33,7 +34,7 @@ body{
 }
 .tr{
     transform: translate(1px,-51px);
-    
+    box-shadow: 0px 8px 24px 0px rgba(91, 158, 225, 0.60);
     position: relative;
     z-index: 40;
 }
