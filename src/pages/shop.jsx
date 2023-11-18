@@ -58,7 +58,7 @@ function Shop() {
   return (
       <motion.div
       variants={variant} initial="initial" animate="animate" exit="exit"
-   className=' px-6 w-screen h-[890px] overflow-y-hidden bg-[#F7F7F9]'>
+   className=' px-6 w-screen h-[900px] overflow-y-hidden bg-[#F7F7F9]'>
        {/* Intro section */}
      <section className='flex items-center justify-between pt-6 '>
       <Link to='/home' >
