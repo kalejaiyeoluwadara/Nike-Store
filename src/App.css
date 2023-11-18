@@ -2,6 +2,7 @@
     font-family: 'Poppins', sans-serif;
     margin-top: 0px;
     padding:0px ;
+    user-select: none;
 }
 html{
     scroll-behavior: smooth;
@@ -16,8 +17,11 @@ hr{
 body{
     background-color: #f5f3f3;
     overflow-x: hidden;
+    user-select: none;
 }
-
+.brw{
+    border: 3px solid white;
+}
 .ral{
     font-family: 'Raleway', sans-serif;
 }

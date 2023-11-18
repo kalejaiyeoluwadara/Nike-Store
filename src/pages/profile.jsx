@@ -1,6 +1,6 @@
 import React from 'react'
 import Foot from '../components/foot'
-import profile1 from './../assets/profile.png'
+import profile1 from './../assets/port3.jpg'
 import edit from './../assets/icons/edit.png'
 import { motion } from 'framer-motion'
 import { useGlobal } from '../context'
@@ -27,9 +27,13 @@ function Profile() {
         <p  className='font-[700]  text-blue-600 text-[17px] ral '>Edit</p>
       </section>
     
-      <section className='flex    items-center justify-center'>
-           <div className='relative'>
-           <img className='' src={profile1} alt="" />
+      <section className='flex  items-center justify-center'>
+           <div className='relative  overflow-hidden '>
+           <motion.img
+           whileHover={{
+            scale:1.5
+           }}
+           className='h-[120px] overflow-hidden w-[120px] rounded-[50%] ' src={profile1} alt="" />
             <img src={edit} className='bottom-0  absolute right-3' alt="" />
            </div>
       </section>
@@ -37,12 +41,12 @@ function Profile() {
       <section className='mt-[50px] pb-20 w-[100%] px-6 gap-8 flex flex-col '>
         <div>
             <h1 className='ral font-[700] opacity-[0.9] '>Your Name</h1>
-            <div className='bg-gray-200 uppercase font-[500] ral mt-2 h-[60px] rounded-[10px] flex items-center px-6 '><h1 className='outline-none' >Emmanuel Oyiboke</h1></div>
+            <div className='bg-gray-200 uppercase font-[500] ral mt-2 h-[60px] rounded-[10px] flex items-center px-6 '><h1 className='outline-none uppercase' >Kalejaiye oluwadara</h1></div>
         </div>
 
         <div>
             <h1 className='ral font-[700] opacity-[0.9] '>Email Address</h1>
-            <div className='bg-gray-200 font-[500] ral mt-2 h-[60px] rounded-[10px] flex items-center px-6 '><h1 className='outline-none' >emmanueloyiboke@gmail.com</h1></div>
+            <div className='bg-gray-200 font-[500] ral mt-2 h-[60px] rounded-[10px] flex items-center px-6 '><h1 className='outline-none' >Kalejaiyedara@gmail.com</h1></div>
         </div>
 
         <div>

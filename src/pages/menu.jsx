@@ -1,9 +1,11 @@
 import React from 'react'
-import profile1 from './../assets/profile.png'
 import bac from './../assets/views/menubac.png'
 import { useGlobal } from '../context'
+import profile1 from './../assets/port3.jpg'
 import sign from './../assets/icons/sign.png'
 import { delay, motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+Link
 function Menu() {
     const {profile,love,cart,bell,menus,setMenu,sliders,settings,order} = useGlobal();
     const pages = [{
@@ -39,21 +41,30 @@ function Menu() {
         }} 
   return (
     
-<motion.div onClick={() =>{setMenu(false)}}  variants={variant} initial="initial" animate="animate" exit="exit" className='bg-blue-500 fixed top-0 z-40 left-0 h-[110vh] px-10 py-10 w-screen '>
+<motion.div   variants={variant} initial="initial" animate="animate" exit="exit" className='bg-blue-500 fixed top-0 z-40 left-0 h-[110vh] px-10 py-10 w-screen '>
       <section>
-        <img src={profile1}alt="" />
-        <h1 className='text-white ral mt-4 font-[500] text-[20px] '>Emmanuel Oyiboke</h1>
+      <motion.img          
+           className='h-[120px] brw overflow-hidden w-[120px] rounded-[50%] ' src={profile1} alt="" />
+        <h1 className='text-white ral mt-4 font-[500] capitalize text-[20px] '>Kalejaiye oluwadara</h1>
       </section>
       <section className=' mt-[60px] flex text-[18px]  flex-col text-white gap-8'>
         {
             pages.map((item,id) =>{
                 return(
-                    <div className='flex gap-4 items-start '>
+                    <motion.div 
+                    onClick={() =>{setMenu(false)}}
+                    whileHover={{
+                      scale:1.1
+                    }}
+                    whileTap={{
+                      scale:0.9
+                    }}
+                    className='flex gap-4 items-start '>
                         <div className='w-[40px]'>
                         <img src={item.img} alt="" />
                         </div>
                         <p className=' text-start capitalize '>{item.name}</p>
-                    </div>
+                    </motion.div>
                 )
             })
         }

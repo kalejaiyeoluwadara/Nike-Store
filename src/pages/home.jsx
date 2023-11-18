@@ -51,7 +51,7 @@ function Home() {
                <img className='opacity-[0.6]' src={search} alt="" />
                <input className='w-[90%]  outline-none placeholder:text-bg-gray-900 placeholder:opacity-1 ' placeholder='Looking for shoes' type="text" />
        </div>
-       <div className='h-[50px] flex items-center justify-center w-[50px] bg-blue-600 rounded-[50%] '>
+       <div className='h-[50px] flex items-center justify-center w-[50px] bg-blue-500 rounded-[50%] '>
            <img src={sliders} alt="" />
        </div>
      </section>

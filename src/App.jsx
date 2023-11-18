@@ -3,7 +3,7 @@ import React, { useState, useContext, useEffect } from "react";
 import {Route,Link, BrowserRouter as Router, Switch,useLocation} from 'react-router-dom'
 import Onboard from "./pages/onboard";
 import Home from "./pages/home";
-import Menu from "./pages/menu";
+// import Menu from "./pages/menu";
 import Profile from "./pages/profile";
 import Favorites from "./pages/favorites";
 import Notification from "./pages/notification";

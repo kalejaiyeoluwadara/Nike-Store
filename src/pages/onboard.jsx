@@ -55,6 +55,13 @@ function Onboard() {
           </motion.svg>
 
           <h1 className="font-[700] text-white text-[70px]">NIKE</h1>
+          <motion.p
+          animate={{
+            opacity:[1,0,0,1],transition:{
+              duration:3,repeat:Infinity
+            }
+          }}
+          className='translate-y-20 text-white text-[20px] font-[300] '>Tap Me</motion.p>
         </div>
       </div>
     </Link>

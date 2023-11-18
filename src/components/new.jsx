@@ -1,6 +1,7 @@
 import React from 'react'
 import { useGlobal } from '../context';
 import { motion } from 'framer-motion';
+import star from '../assets/icons/Path.svg'
 function New() {
     const {perc,main,news} = useGlobal();
   return (
@@ -13,8 +14,8 @@ function New() {
         <div className='bg-white relative py-6 mt-6 px-6 rounded-[9px] flex justify-between items-center '>
         
         <section className='w-[70%]'>
-          <h3 className='mb-3 ral font-[500]'>Summer sale</h3>
-          <img src={perc} alt="" />
+          <h3 className='mb-3 ral font-[600]'>Summer sale</h3>
+          <img className='animate-ping' src={perc} alt="" />
         </section>
         <section className='w-[30%] bg-red-300 ' >
           <img className='absolute right-[120px]  top-2' src={news} alt="" />
